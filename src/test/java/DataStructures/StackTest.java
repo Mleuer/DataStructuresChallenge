@@ -25,7 +25,7 @@ public class StackTest {
         stringStack.push("my");
         stringStack.push("sunshine");
 
-        while (stringStack.size() > 0)
+        while (stringStack.size() > 1)
         {
             stringStack.pop();
         }

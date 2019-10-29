@@ -19,13 +19,9 @@ public class Stack <T> {
      * @return The removed element
      */
     public T pop() {
-        if (data.isEmpty()) {
-            throw new EmptyStackException();
-        } else {
-            T obj = data.get(data.size() - 1);
-            data.remove(data.size() - 1);
-            return obj;
-        }
+        T obj = peek();
+        data.remove(data.size() - 1);
+        return obj;
     }
 
     /**
@@ -44,7 +40,7 @@ public class Stack <T> {
      * @return The number of elements contained in the stack
      */
     public long size() {
-        return data.size() - 1;
+        return data.size();
     }
 }
 
