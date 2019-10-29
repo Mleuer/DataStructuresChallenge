@@ -1,14 +1,13 @@
 package DataStructures;
 
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import static jdk.jshell.spi.ExecutionControl.NotImplementedException;
-
 
 public class StackTest {
 
     @Test
-    public void lastInShouldBeFirstOut() throws NotImplementedException {
+    public void lastInShouldBeFirstOut() {
         var stringStack = new Stack<String>();
 
         stringStack.push("steal");
@@ -19,14 +18,14 @@ public class StackTest {
     }
 
     @Test
-    public void firstInShouldBeLastOut() throws NotImplementedException {
+    public void firstInShouldBeLastOut() {
         var stringStack = new Stack<String>();
 
         stringStack.push("steal");
         stringStack.push("my");
         stringStack.push("sunshine");
 
-        while (stringStack.size() > 1)
+        while (stringStack.size() > 0)
         {
             stringStack.pop();
         }
@@ -35,7 +34,7 @@ public class StackTest {
     }
 
     @Test
-    public void popShouldReversePush() throws NotImplementedException {
+    public void popShouldReversePush() {
         var stringStack = new Stack<String>();
 
         stringStack.push("steal");
@@ -48,7 +47,7 @@ public class StackTest {
     }
 
     @Test
-    public void peekShouldNotMutateStackState() throws NotImplementedException {
+    public void peekShouldNotMutateStackState() {
         var stringStack = new Stack<String>();
 
         stringStack.push("my");
